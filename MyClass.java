@@ -23,5 +23,13 @@ public class MyClass {
         for (int i = 2; i < 34; i++) {
             fibArr.add(fibArr.get(i-2) + fibArr.get(i-1));
         }
+        int evenFibSum = 0;
+        for (int i = 0; i < fibArr.size(); i++) {
+            if ((fibArr.get(i) < 4000000) && (fibArr.get(i) % 2 == 0)){
+
+                evenFibSum += fibArr.get(i);
+            }
+        }
+        System.out.println("sum of even fib sequence under 4mil is: " + evenFibSum);
     }
 }
